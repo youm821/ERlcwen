@@ -6,11 +6,10 @@ const PORT = process.env.PORT || 10000;
 
 app.use(express.json());
 
-// Files are in the same folder as server.js
 app.use(express.static(__dirname));
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "index.html");
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.get("/health", (req, res) => {
